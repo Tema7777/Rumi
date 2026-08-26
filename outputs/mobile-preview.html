@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rumi — мобильный предпросмотр</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      display: grid;
+      min-height: 100vh;
+      margin: 0;
+      padding: 28px;
+      place-items: center;
+      color: #173629;
+      background: #edf6f0;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .preview { display: grid; justify-items: center; gap: 14px; }
+    .preview p { margin: 0; font-size: 13px; font-weight: 700; }
+    .phone {
+      width: 422px;
+      padding: 14px;
+      border: 2px solid rgba(255,255,255,.75);
+      border-radius: 48px;
+      background: #10251c;
+      box-shadow: 0 30px 80px rgba(23,63,45,.24);
+    }
+    iframe {
+      display: block;
+      width: 390px;
+      height: 844px;
+      border: 0;
+      border-radius: 35px;
+      background: white;
+    }
+    @media (max-width: 480px) {
+      body { display: block; padding: 0; }
+      .preview p { display: none; }
+      .phone { width: 100%; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+      iframe { width: 100%; height: 100vh; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <p>Мобильная версия · 390 × 844 px</p>
+    <div class="phone">
+      <iframe src="index.html?viewport=mobile&amp;v=20260826-static-hero" title="Мобильная версия сайта Rumi"></iframe>
+    </div>
+  </main>
+</body>
+</html>
